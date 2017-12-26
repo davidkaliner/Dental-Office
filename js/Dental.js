@@ -1,5 +1,9 @@
-$("#showtimes").click(function()
-    {  
-        window.open("Showtimes.html");  
-    });  
+/*global $ document */
+
+$(document).ready(function() {
+    $("#login-page").show();
+    $("#main-page").hide();
     
+    
+   
+});
