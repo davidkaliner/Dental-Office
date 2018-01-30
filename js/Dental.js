@@ -7,7 +7,7 @@ $(document).ready(function() {
      
     
     $(document.body).on('click',"#SubmitLogin",function () {
-       var url = 'http://4024c384.ngrok.io';
+       var url = 'http://adca8a96.ngrok.io';
         var dataLogin = {
               Username: document.getElementById('InputUsername').value,
               Password: document.getElementById('InputPassword').value
