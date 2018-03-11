@@ -1,13 +1,9 @@
 /*global $ document alert */
 
-$(document).ready(function() {
-    $("#login-page").show();
-    $("#main-page").hide();
-    $("#calender-page").hide();
-     
-    
-    $(document.body).on('click',"#SubmitLogin",function () {
-       var url = 'http://adca8a96.ngrok.io';
+var mainFunction = (function()
+{
+    function userLogin(){
+        var url = 'http://316d77d8.ngrok.io';
         var dataLogin = {
               Username: document.getElementById('InputUsername').value,
               Password: document.getElementById('InputPassword').value
@@ -31,78 +27,49 @@ $(document).ready(function() {
                 alert(xhr.responseText);
             }
         });
-    });
+    }
     
-    
-    $(document.body).on('click',"#AppointmentButton",function () {
-        $("#login-page").hide();
-        $("#main-page").hide();
-        $("#calender-page").show();
-    });
-    
- function a(){
-     var url = 'http://e422b9cb.ngrok.io';
-     var dataTest = {
-      Name: "test doctor",
-      Username: "testdoc",
-      Password: "12341234",
-      Privilege: "1"
-    };
-    var dataObj = {mydata: dataTest};
+    function registerUser(){
+        var url = 'http://316d77d8.ngrok.io';
+        var dataTest = {
+            Name: "test doctor",
+            Username: "testdoc",
+            Password: "12341234",
+            Privilege: "1"
+        };
+        var dataObj = {mydata: dataTest};
 
-    $.ajax({
-        type: "POST",
-        url: url + '/Dental-registration.php',
-        data: dataObj,
-        success: function(response) {
-            alert(response);
-        },
-        error: function(response) {
-            alert(response);
-        }
-    });
- }
- 
-$(document.body).on('click',"#Register",function () {
-         a();
-});
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-    $("Register").click(function(){
-        $.post("Dental-registration.php",
-        {
-          Name: "test doctor",
-          Username: "testdoc",
-          Password: "12341234",
-          Privilege: "1"
-        },
-        function(data,status){
-            alert("Data: " + data + "\nStatus: " + status);
+        $.ajax({
+            type: "POST",
+            url: url + '/Dental-registration.php',
+            data: dataObj,
+            success: function(response){
+                alert(response);
+            },
+            error: function(response){
+                alert(response);
+            }
         });
-        
-        alert("clicked!")
-    });*/
+    }
     
-   
+    $(document).ready(function(){
+        $("#login-page").show();
+        $("#main-page").hide();
+        $("#calender-page").hide();
+         
+        $(document.body).on('click',"#SubmitLogin",function () {
+            userLogin();
+        });
     
+        $(document.body).on('click',"#Register",function () {
+            registerUser();
+        });
     
- /*   
-    
-    $.post( 
-    'Dental-registration.php', // location of your php script
-    { Name: "testdoc", user_id: testdoc , Password: "12341234" , Privilege: "1" }, // any data you want to send to the script
-    function( data ){  // a function to deal with the returned information
-
-        $( 'body ').append( data );
-
+        $(document.body).on('click',"#AppointmentButton",function () {
+            $("#login-page").hide();
+            $("#main-page").hide();
+            $("#calender-page").show();
+        });  
     });
-    */
-   
-});
+    
+}());
