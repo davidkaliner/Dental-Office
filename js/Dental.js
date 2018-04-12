@@ -3,7 +3,7 @@
 var mainFunction = (function()
 {
     function userLogin(){
-        var url = 'http://2fb26924.ngrok.io';
+        var url = 'http://b4a54c41.ngrok.io';
         var dataLogin = {
               Username: document.getElementById('InputUsername').value,
               Password: document.getElementById('InputPassword').value
@@ -30,7 +30,7 @@ var mainFunction = (function()
     }
     
     function registerUser(){
-        var url = 'http://2fb26924.ngrok.io';
+        var url = 'http://b4a54c41.ngrok.io';
         var dataTest = {
             Name: "test doctor",
             Username: "testdoc",
