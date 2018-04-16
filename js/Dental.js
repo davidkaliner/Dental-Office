@@ -2,8 +2,22 @@
 
 var mainFunction = (function()
 {
+    $(document).ready(function(){
+      var date_input=$('input[name="date"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'dd/mm/yyyy',
+       container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
+    
+    
+    
     function userLogin(){
-        var url = 'http://b4a54c41.ngrok.io';
+        var url = 'http://93d71b22.ngrok.io';
         var dataLogin = {
               Username: document.getElementById('InputUsername').value,
               Password: document.getElementById('InputPassword').value
@@ -30,7 +44,7 @@ var mainFunction = (function()
     }
     
     function registerUser(){
-        var url = 'http://b4a54c41.ngrok.io';
+        var url = 'http://93d71b22.ngrok.io';
         var dataTest = {
             Name: "test doctor",
             Username: "testdoc",
@@ -71,5 +85,9 @@ var mainFunction = (function()
             $("#calender-page").show();
         });  
     });
+    
+    
+
+    
     
 }());
