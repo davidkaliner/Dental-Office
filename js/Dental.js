@@ -17,7 +17,7 @@ var mainFunction = (function()
     
     
     function userLogin(){
-        var url = 'http://ed2cc39d.ngrok.io';
+        var url = 'http://75dc4684.ngrok.io';
         var dataLogin = {
               Username: document.getElementById('InputUsername').value,
               Password: document.getElementById('InputPassword').value
@@ -31,10 +31,17 @@ var mainFunction = (function()
                 alert(response);
                 response = response.trim();
                 response = response.replace(/\"/g, "");
-                if(response == "Found")
+                if(response == "Found doctor")
                 {
                    $("#login-page").hide();
-                    $("#main-page").show(); 
+                    $("#main-page").hide();
+                    $("#google-calender-page").show();
+                }
+                else(response == "Found patient")
+                {
+                   $("#login-page").hide();
+                    $("#main-page").show();
+                    
                 }
             },
             error: function(xhr) {
@@ -44,7 +51,7 @@ var mainFunction = (function()
     }
     
     function registerUser(){
-        var url = 'http://ed2cc39d.ngrok.io';
+        var url = 'http://75dc4684.ngrok.io';
         var dataTest = {
             Name: "test doctor",
             Username: "testdoc",
