@@ -17,7 +17,7 @@ var mainFunction = (function()
     
     
     function userLogin(){
-        var url = 'http://75dc4684.ngrok.io';
+        var url = 'http://8e989ab7.ngrok.io';
         var dataLogin = {
               Username: document.getElementById('InputUsername').value,
               Password: document.getElementById('InputPassword').value
@@ -51,7 +51,7 @@ var mainFunction = (function()
     }
     
     function registerUser(){
-        var url = 'http://75dc4684.ngrok.io';
+        var url = 'http://8e989ab7.ngrok.io';
         var dataTest = {
             Name: "test doctor",
             Username: "testdoc",
