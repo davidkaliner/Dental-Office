@@ -1,5 +1,7 @@
 /*global $ document alert */
 
+
+
 var mainFunction = (function()
 {
    /* $(document).ready(function(){
@@ -52,6 +54,28 @@ var mainFunction = (function()
             }
         });
     }
+    
+   function updateInfo(){
+       
+       var updated = {
+              Username: document.getElementById('InputUsername').value,
+              Password: document.getElementById('InputPassword').value,
+              Phone: document.getElementById('InputPhoneNum').value,
+              Email: document.getElementById('InputEmail').value,    
+        };
+       var dataObj2 = {mydata2: updated};
+       
+       $.ajax({
+            type: "POST",
+            url: url + '/Update-info.php',
+            data: dataObj2,
+            success: function(response) {
+                alert(response);
+                response = response.trim();
+                response = response.replace(/\"/g, "");
+       
+   }
+    
     
     function registerUser(){
         var dataTest = {
@@ -156,7 +180,7 @@ var mainFunction = (function()
     $(document).ready(function(){
         $("#login-page").show();
         $("#calender-page").hide();
-        $("#PatientFilesButton").hide();
+        $("#patient-files").hide();
         $("#main-page").hide();
         $("#update-info").hide();
          
@@ -168,47 +192,71 @@ var mainFunction = (function()
             registerUser();
         });
     
+//------------------------------------button to enter datepick page---------------------------------------------
         $(document.body).on('click',"#AppointmentButton",function () {
+            $("#calender-page").show();
             $("#login-page").hide();
             $("#main-page").hide();
-            $("#PatientFilesButton").hide();
-            $("#calender-page").show();
+            $("#patient-files").hide();
             $("#update-info").hide();
             
         });
         
-        $(document.body).on('click',"#PatientFilesButton",function () {
-            $("#login-page").hide();
-            $("#main-page").hide();
-            $("#calender-page").hide();
-            $("#patient-files").show();
-            $("#update-info").hide();
-        });
         
+ //-------------------------------------button back from datepick to main-page----------------------------------       
         $(document.body).on('click',"#BackDatePick",function () {
+            $("#main-page").show();
             $("#login-page").hide();
             $("#calender-page").hide();
             $("#patient-files").hide();
-            $("#main-page").show();
             $("#update-info").hide();
         });
         
+        
+  //-----------------------------------button to enter patient files---------------------------------------------      
+        
+        $(document.body).on('click',"#PatientFilesButton",function () {
+            $("#patient-files").show();
+            $("#login-page").hide();
+            $("#main-page").hide();
+            $("#calender-page").hide();
+            $("#update-info").hide();
+        });
+  //-----------------------------------button back from patient files to main-page-------------------------------      
+        
+        $(document.body).on('click',"#BackPatientFiles",function () {
+            $("#main-page").show();
+            $("#login-page").hide();
+            $("#calender-page").hide();
+            $("#patient-files").hide();
+            $("#update-info").hide();
+        });
+        
+        
+        
+        
+ //--------------------------------------button to enter update info page------------------------------------------       
         
         $(document.body).on('click',"#UpdateInfo",function () {
             $("#login-page").hide();
             $("#main-page").hide();
             $("#calender-page").hide();
-            $("#PatientFilesButton").hide();
+            $("#patient-files").hide();
             $("#update-info").show();
         });
-        
+
+//------------------------------------button back from update info to main-page------------------------------------        
+
          $(document.body).on('click',"#BackUpdateInfo",function () {
+             
+            $("#main-page").show(); 
             $("#login-page").hide();
             $("#calender-page").hide();
             $("#patient-files").hide();
-            $("#main-page").show();
-            $("#update-info").hide();
+            $("#update-info").hide(); 
         });
+        
+        
         
         $('#datetimepicker12').datetimepicker({
                         inline: true,
