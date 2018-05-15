@@ -15,9 +15,11 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/smalot-bootstrap-datetimepicker/2.4.4/js/bootstrap-datetimepicker.min.js"></script>
+        <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
         <script src="js/Dental.js"></script>
    </head>
      <body>
+ 
 <!--------------------------------------login page---------------------------------------------------------------------->
          <div id = "login-page" >
             <form id="Dental_login">
@@ -32,8 +34,9 @@
 
             </form>
         </div> 
-    
-<!-------------------------------------calender page----------------------------------------------------------------------------->    
+
+
+<!-------------------------------------calender page------------------------------------------------------------------->    
     
       <div id = "calender-page">
        <!-- <div class="input-group date" data-provide="datepicker">
@@ -66,42 +69,77 @@
           
           
           
-          
           <!-- <div id = "calender-style">
             <form action="/action_page.php">
                 Appointment:
               <input type="date" name="appointment-date">
               <input type="submit">
           </div>-->
+          
+                   <button type="button" id = "BackDatePick" class ="BackDPStyle" >Back</button> 
+
         </div>    
+   
     
- <!--------------------------------------------main page--------------------------------------------------------------------->   
+    
+    <!-------------------------------------------doctor search page------------------------------------------------->
+ <!-------------------------------------------patient files page------------------------------------------------->
+ <!-------------------------------------------Update info page------------------------------------------------->
+    <div id = "update-info">
+        <form id="update-info-form">
+                <label class="UsernameLabelStyle">New Username: </label><br>
+                <input id="InputUsername" class="InputUsernameStyle" name="username"></input>
+                <br>
+                <label class="PasswordLabelStyle">New Password: </label><br>
+                <input id="InputPassword" class="InputPasswordStyle" type="password" name="password"></input>
+                <br>
+                <label class="UsernameLabelStyle">Telephone Number: </label><br>
+                <input id="InputPhoneNum" class="InputPhoneNumStyle" name="phonenum"></input>
+                <br>
+                <label class="EmailLabelStyle">Email: </label><br>
+                <input id= "InputEmail" class="InputEmailStyle" type="email" name="email"></input>
+                <br>
+    
+    
+    
+                <button type="button" id = "Back" class ="BackUpdateInfo" >Back</button>
+                <button type="button" id = "UpdateNewInfo" class ="UpdateNewInfoStyle" >Update</button>
+
+            </form>
+        
+        
+    </div>
+ <!-------------------------------------------google calender page-------------------------------------------------------->
+ 
+        <div id = "google-calender-page">
+            <button id="authorize-button" style="display: none;">Authorize</button>
+            <button id="signout-button" style="display: none;">Sign Out</button>
+            <pre id="content"></pre>
+            <!--<iframe src="https://calendar.google.com/calendar/embed?src=jtgimrp0tktq69np5qopvrn5c8%40group.calendar.google.com&ctz=Asia%2FJerusalem" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>-->
+        </div>    
+ 
+   
+ <!--------------------------------------------main page----------------------------------------------------------------->   
     
         <div id = "main-page">  
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <a class="navbar-brand" id = "AppointmentButton" href="#">Appointments</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" id = "PatientFilesButton1" href="#">Patient Files1</a>
+          <a class="navbar-brand" id = "UpdateInfo" href="#">Update Personal Information</a>
+         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-            
- <!-------------------------------------------google calender page----------------------------------------------------------->                 
-        <div id = "google-calender-page"> 
-            <iframe src="https://calendar.google.com/calendar/embed?src=jtgimrp0tktq69np5qopvrn5c8%40group.calendar.google.com&ctz=Asia%2FJerusalem" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-            </div>    
- <!--------------------------------------nav bar------------------------------------------------------------------------>         
-            
-            
-
+          </button>-->
+ 
           <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Treatment Plans <span class="sr-only">(current)</span></a>
-              </li>
+                <a class="nav-brand" id = "PatientFilesButton2" href="#">Patient Files2</a>
+              </li><!--
               <li class="nav-item">
                 <a class="nav-link" href="#">Important Information</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#">About Us</a>
+                <a class="nav-link active" href="#">About Us</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Treatments</a>
@@ -111,9 +149,10 @@
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
               </li>
-            </ul>
+            </ul>   
+          </div> -->
+                
 
-          </div>
         </nav>
 
         <main role="main">
@@ -126,7 +165,7 @@
               <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
             </div>
           </div>
-<!------------------------------------------------bootstrap container---------------------------------------------------------------->  
+<!------------------------------------------------bootstrap container---------------------------------------------------->  
           <div class="container">
             <!-- Example row of columns -->
             <div class="row">
@@ -150,6 +189,7 @@
             <hr>
 
           </div> <!-- /container -->
-        
+            </main> 
+            </div>
     </body>
 </html>

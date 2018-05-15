@@ -10,3 +10,26 @@ calender-style{
     width: auto;
     height: auto;
 }
+
+.PatientFilesButton{
+    background-color: blue;
+    width: auto;
+    height: auto;
+}
+
+.main-page{
+    background-color: red;
+}
+
+
+.login-page{
+    background-color: aqua;
+}
+
+.Dental-Login{
+    background-color: aqua;
+}
+
+back{
+    color: aquamarine;
+}
