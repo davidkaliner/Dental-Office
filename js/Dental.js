@@ -15,7 +15,7 @@ var mainFunction = (function()
       };
       date_input.datepicker(options);
     })*/
-    var url = 'http://ec2-18-221-134-60.us-east-2.compute.amazonaws.com';
+    var url = 'http://23f14b4c.ngrok.io';
     var CLIENT_ID = '512318917553-vukvellsr2371gfrcj197ms2hc1g2hni.apps.googleusercontent.com';
     var API_KEY = '<YOUR_API_KEY>';
     var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
@@ -263,9 +263,5 @@ var mainFunction = (function()
                         sideBySide: true
         });
     });
-    
-    
-
-    
-    
+  
 }());

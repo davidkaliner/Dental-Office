@@ -1,6 +1,4 @@
 <!DOCTYPE html5>
-<html lang="en">
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -17,11 +15,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/smalot-bootstrap-datetimepicker/2.4.4/js/bootstrap-datetimepicker.min.js"></script>
         <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
         <script src="js/Dental.js"></script>
-   </head>
-     <body>
- 
-<!--------------------------------------login page---------------------------------------------------------------------->
-         <div id = "login-page" >
+    </head>
+    <body>
+<!--------------------------------------login page---------------------------------------------------------------------->           <div id = "login-page" >
             <form id="Dental_login">
                 <label class="UsernameLabelStyle">Username: </label><br>
                 <input id="InputUsername" class="InputUsernameStyle" name="username"></input>
@@ -31,70 +27,36 @@
                 <br>
                 <button type="button" id = "Register" class ="RegisterLoginStyle" >Register</button>
                 <button type="button" id = "SubmitLogin" class ="SubmitLoginStyle" >Login</button>
-
             </form>
         </div> 
-
-
-<!-------------------------------------calender page------------------------------------------------------------------->    
-    
-      <div id = "calender-page">
-       <!-- <div class="input-group date" data-provide="datepicker">
-            <input type="text" class="form-control">
-            <div class="input-group-addon">
-                <span class="glyphicon glyphicon-th"></span>
-            </div>
-        </div>  -->
-          <div style="overflow:hidden;">
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div id="datetimepicker12"></div>
+<!-------------------------------------calender page------------------------------------------------------------------->            <div id = "calender-page">
+           <!-- <div class="input-group date" data-provide="datepicker">
+                <input type="text" class="form-control">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-th"></span>
+                </div>
+            </div>  -->
+            <div style="overflow:hidden;">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="datetimepicker12"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
-          
-     <!--<form method="post">
-      <div class="form-group"> Date input
-        <label class="control-label" for="date">Date</label>
-        <input data-provide="datepicker" class="form-control" id="date" name="date" placeholder="DD/MM/YYY" type="date"/>
-      </div>
-      <div class="form-group"> 
-        <button class="btn btn-primary " name="submit" type="submit">Submit</button>
-      </div>
-     </form>
-          
-          
-          
-          
-          
-          <!-- <div id = "calender-style">
-            <form action="/action_page.php">
-                Appointment:
-              <input type="date" name="appointment-date">
-              <input type="submit">
-          </div>-->
-          
-                   <button type="button" id = "BackDatePick" class ="BackDPStyle" >Back</button> 
-
+            <button type="button" id = "BackDatePick" class ="BackDPStyle" >Back</button> 
         </div>    
-   
+<!-------------------------------------------doctor search page------------------------------------------------->
     
     
-    <!-------------------------------------------doctor search page------------------------------------------------->
- <!-------------------------------------------patient files page------------------------------------------------->
-    <div id = "patient-files">
-        
-        
-        
-        <button type="button" id = "BackPatientFiles" class ="BackPatientFilesStyle" >Back</button>
-        
-    </div>
-    
- <!-------------------------------------------Update info page------------------------------------------------->
-    <div id = "update-info">
-        <form id="update-info-form">
+<!-------------------------------------------patient files page------------------------------------------------->
+        <div id = "patient-files">
+            <button type="button" id = "BackPatientFiles" class ="BackPatientFilesStyle" >Back</button> 
+        </div>
+<!-------------------------------------------Update info page------------------------------------------------->
+        <div id = "update-info">
+            <form id="update-info-form">
                 <label class="UsernameLabelStyle">New Username: </label><br>
                 <input id="InputUsername" class="InputUsernameStyle" name="username"></input>
                 <br>
@@ -107,97 +69,78 @@
                 <label class="EmailLabelStyle">Email: </label><br>
                 <input id= "InputEmail" class="InputEmailStyle" type="email" name="email"></input>
                 <br>
-    
-    
-    
                 <button type="button" id = "BackUpdateInfo" class ="BackUpdateInfoStyle" >Back</button>
                 <button type="button" id = "UpdateNewInfo" class ="UpdateNewInfoStyle" >Update</button>
-
             </form>
-                
-        
-    </div>
+        </div>
  <!-------------------------------------------google calender page-------------------------------------------------------->
- 
         <div id = "google-calender-page">
-            <button id="authorize-button" style="display: none;">Authorize</button>
-            <button id="signout-button" style="display: none;">Sign Out</button>
-            <pre id="content"></pre>
-            <!--<iframe src="https://calendar.google.com/calendar/embed?src=jtgimrp0tktq69np5qopvrn5c8%40group.calendar.google.com&ctz=Asia%2FJerusalem" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>-->
+        <button id="authorize-button" style="display: none;">Authorize</button>
+        <button id="signout-button" style="display: none;">Sign Out</button>
+        <pre id="content"></pre>
+        <!--<iframe src="https://calendar.google.com/calendar/embed?src=jtgimrp0tktq69np5qopvrn5c8%40group.calendar.google.com&ctz=Asia%2FJerusalem" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>-->
         </div>    
- 
-   
- <!--------------------------------------------main page----------------------------------------------------------------->   
-    
+<!--------------------------------------------main page----------------------------------------------------------------->   
         <div id = "main-page">  
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <a class="navbar-brand" id = "AppointmentButton" href="#">Appointments</a>
-          <a class="navbar-brand" id = "PatientFilesButton" href="#">Patient Files</a>
-          <a class="navbar-brand" id = "UpdateInfo" href="#">Update Personal Information</a>
-         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>-->
- 
-          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-brand" id = "PatientFilesButton2" href="#">Patient Files2</a>
-              </li><!--
-              <li class="nav-item">
-                <a class="nav-link" href="#">Important Information</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">About Us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Treatments</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" id = "AppointmentButton" href="#">Appointments</a>
+                <a class="navbar-brand" id = "PatientFilesButton" href="#">Patient Files</a>
+                <a class="navbar-brand" id = "UpdateInfo" href="#">Update Personal Information</a>
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>-->
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-brand" id = "PatientFilesButton2" href="#">Patient Files2</a>
+                        </li><!--
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Important Information</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">About Us</a>
+                          </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Treatments</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                </ul>   -->
                 </div>
-              </li>
-            </ul>   
-          </div> -->
-                
-
-        </nav>
-
-        <main role="main">
-
-          <!-- Main jumbotron for a primary marketing message or call to action -->
-          <div class="jumbotron">
-            <div class="container">
-              <h1 class="display-3">Hello, world!</h1>
-              <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-              <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-            </div>
-          </div>
-<!------------------------------------------------bootstrap container---------------------------------------------------->  
-          <div class="container">
-            <!-- Example row of columns -->
-            <div class="row">
-              <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-              </div>
-              <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-              </div>
-              <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-              </div>
-            </div>
-<!--------------------------------------------------------------------------------------------------------------------------------------->  
-            <hr>
-
-          </div> <!-- /container -->
+            </nav>
+            <main role="main">
+            <!-- Main jumbotron for a primary marketing message or call to action -->
+                <div class="jumbotron">
+                    <div class="container">
+                        <h1 class="display-3">Hello, world!</h1>
+                        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+                    </div>
+                </div>
+                <div class="container">
+                <!-- Example row of columns -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h2>Heading</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Heading</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Heading</h2>
+                            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                    </div>
+                </div> 
             </main> 
-            </div>
+        </div>
     </body>
 </html>
