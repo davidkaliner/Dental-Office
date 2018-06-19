@@ -1,0 +1,303 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+	padding-top: 3.5rem;
+    background: linear-gradient(#EFF8FB,#66b3ff)
+}
+
+calender-style{
+    width: auto;
+    height: auto;
+}
+
+.PatientFilesButton{
+    background-color: blue;
+    width: auto;
+    height: auto;
+}
+
+/* all style elements for login page */
+#login-page{
+    border-style: outset;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+}
+
+#SubmitLogin{
+    background-color: #7BF3FB;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#SubmitLogin:hover{
+    background-color: aqua;
+}
+
+#RegisterPage{
+    background-color: #7BF3FB;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#RegisterPage:hover{
+    background-color: aqua;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    color: #2a2a2a !important;
+    -webkit-text-fill-color: blue !important;
+}
+
+.LoginTitle{
+    font-family: serif;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+/* all style elements for register page */
+#register-info-page{
+    border-style: outset;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+}
+    
+.registerTitle{
+    font-family: serif;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3); 
+}    
+
+#BackRegisterInfo{
+    background-color: #7BF3FB;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#BackRegisterInfo:hover{
+    background-color: aqua;
+}
+
+#registerInfo{
+    background-color: #7BF3FB;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#registerInfo:hover{
+    background-color: aqua;
+}
+
+/* all style elements for patient main page */ 
+#main-page{
+    
+}
+
+.AppointmentBtnStyle{
+	margin-left: 100px;
+}
+
+.AppointmentBtnStyle:hover{
+	background-color: lightgrey;
+}
+
+.UpdateInfoBtnStyle{
+	margin-left: 40px;
+}
+
+.UpdateInfoBtnStyle:hover{
+	background-color: lightgrey;
+}
+
+.AboutUsBtnStyle{
+	margin-left: 40px;
+}
+
+.AboutUsBtnStyle:hover{
+	background-color: lightgrey;
+}
+
+.LogoutBtnStyle{
+    margin-left: 900px;
+}
+
+.LogoutBtnStyle:hover{
+    background-color: darkgrey;
+}
+
+#bottom-left-box{
+    background-repeat: no-repeat;
+    background-size: contain;
+    clear: both;
+    border-style: outset;
+}
+
+#bottom-middle-box{
+    background-repeat: no-repeat;
+    background-size: contain;
+    clear: both;
+    border-style: outset;
+}
+
+#bottom-right-box{
+    background-repeat: no-repeat;
+    background-size: contain;
+    clear: both;
+    border-style: outset;
+}
+
+.col-md-4{
+    font-weight: bolder;
+}
+
+/* all style elements for patient update personal info */
+#update-info-page{
+    border-style: outset;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+}
+
+.updateTitle{
+    font-family: serif;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3); 
+}
+
+#UpdateNewInfo{
+    background-color: #7BF3FB;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#UpdateNewInfo:hover{
+    background-color: aqua;
+}
+
+#BackUpdateInfo{
+    background-color: #7BF3FB;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#BackUpdateInfo:hover{
+    background-color: aqua;
+}
+
+/* all style elements for patient date picker page */ 
+#patient-calender-page{
+    border-style: outset;
+    width:auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px; 
+}
+
+#SendDatePick{
+    background-color: #7BF3FB;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    float: right;
+}
+
+#SendDatePick:hover{
+    background-color: aqua;    
+}
+
+#BackDatePick{
+    background-color: #7BF3FB;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    float: right;
+}
+
+#BackDatePick:hover{
+    background-color: aqua;
+}
+
+/* all style elements for about us page */ 
+#about-us-page{
+    padding-top: 3.5rem;
+    background-image: url(../pics/aboutbackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.AboutUsTitle{
+    clear: right;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+	color:black;
+    text-shadow: 2px 2px #ffff00;
+	font-size: 32px; 
+}
+
+.AboutUsInfo{
+    font-weight: 100%;
+    clear: right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+	color:black;
+    text-shadow: 2px 2px #ffff00;
+	font-size: 16px;
+}
+
+.AboutUsContactName{
+    font-weight: 100%;
+    clear: right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+	color:black;
+    text-shadow: 2px 2px #ffff00;
+	font-size: 21px; 
+}
+
+.AboutUsContactEmail{
+    font-weight: 100%;
+    clear: right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+	color:black;
+    text-shadow: 2px 2px #ffff00;
+	font-size: 21px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

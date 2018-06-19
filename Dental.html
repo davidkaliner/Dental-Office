@@ -7,35 +7,58 @@
         <meta name="author" content="">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smalot-bootstrap-datetimepicker/2.4.4/css/bootstrap-datetimepicker.css">
-        <link rel = "stylesheet" href="css/Dental.css">
+        <link rel = "stylesheet" href="../DentalManager/css/Dental.css">
         <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/smalot-bootstrap-datetimepicker/2.4.4/js/bootstrap-datetimepicker.min.js"></script>
-        <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+        <script async defer src="https://apis.google.com/js/api.js"></script>
         <script src="js/Dental.js"></script>
     </head>
     <body>
-<!--------------------------------------login page---------------------------------------------------------------------->           <div id = "login-page" >
+		<!-----------------------------Login page------------------------------------------------->   
+        <div class="login_style" id="login-page" >
+            <label class="LoginTitle">Please Log in</label>
             <form id="Dental_login">
                 <label class="UsernameLabelStyle">Username: </label><br>
-                <input id="InputUsername" class="InputUsernameStyle" name="username"></input>
+                <input id="LoginUsername" class="InputUsernameStyle" name="username"/>
                 <br>
                 <label class="PasswordLabelStyle">Password: </label><br>
-                <input id="InputPassword" class="InputPasswordStyle" type="password" name="password"></input>
+                <input id="LoginPassword" class="InputPasswordStyle" type="password" name="password"/>
                 <br>
-                <button type="button" id = "Register" class ="RegisterLoginStyle" >Register</button>
+                <br>
                 <button type="button" id = "SubmitLogin" class ="SubmitLoginStyle" >Login</button>
+                <button type="button" id="RegisterPage" class="RegisterLoginStyle">Register New User</button>
+                <br>
+                <br>
             </form>
         </div> 
-<!-------------------------------------calender page------------------------------------------------------------------->            <div id = "calender-page">
-           <!-- <div class="input-group date" data-provide="datepicker">
-                <input type="text" class="form-control">
-                <div class="input-group-addon">
-                    <span class="glyphicon glyphicon-th"></span>
-                </div>
-            </div>  -->
+		<!-----------------------------Register info page----------------------------------------->
+        <div id="register-info-page">
+            <form id="register-info-form">
+                <label class="registerTitle">Please fill all fields to register</label><br>
+                <label class="registerNameLabelStyle">Name: </label><br>
+                <input id="registerName" class="registerNameStyle" name="name"/>
+                <br>
+                <label class="registerUsernameLabelStyle">Username: </label><br>
+                <input id="registerUsername" class="registerUsernameStyle" name="username"/>
+                <br>
+                <label class="registerPasswordLabelStyle">Password: </label><br>
+                <input id="registerPassword" class="registerPasswordStyle" type="password" name="password"/>
+                <br>
+                <label class="registerPhoneNumLabelStyle">Telephone Number: </label><br>
+                <input id="registerPhoneNum" class="registerPhoneNumStyle" type="number" name="phonenum"/>
+                <br>
+                <label class="registerEmailLabelStyle">Email: </label><br>
+                <input id= "registerEmail" class="registerEmailStyle" type="email" name="email"/>
+                <br>
+                <button type="button" id="BackRegisterInfo" class="BackRegisterInfoStyle">Back</button>
+                <button type="button" id="registerInfo" class="registerInfoStyle">Register</button>
+            </form>
+        </div>
+		<!-----------------------------Patient calender page-------------------------------------->
+		<div id="patient-calender-page">
             <div style="overflow:hidden;">
                 <div class="form-group">
                     <div class="row">
@@ -45,102 +68,132 @@
                     </div>
                 </div>
             </div>
-            <button type="button" id = "BackDatePick" class ="BackDPStyle" >Back</button> 
+			<textarea class="input-lg" id="userDescription" placeholder="reason" rows="3"></textarea>
+            <button type="button" id="SendDatePick" class ="SendPDStyle">Send</button> 
+            <button type="button" id="BackDatePick" class ="BackDPStyle">Back</button> 
         </div>    
-<!-------------------------------------------doctor search page------------------------------------------------->
-    
-    
-<!-------------------------------------------patient files page------------------------------------------------->
-        <div id = "patient-files">
-            <button type="button" id = "BackPatientFiles" class ="BackPatientFilesStyle" >Back</button> 
-        </div>
-<!-------------------------------------------Update info page------------------------------------------------->
-        <div id = "update-info">
+		<!-----------------------------About us page---------------------------------------------->
+		<div id="about-us-page">
+            <div class="AboutUsTitle"></div>
+			<div class="AboutUsInfo"></div>
+			<div class="AboutUsContactName"></div>
+			<div class="AboutUsContactEmail"></div>
+        </div> 
+		<!-----------------------------Update info page------------------------------------------->
+        <div id="update-info-page">
             <form id="update-info-form">
-                <label class="UsernameLabelStyle">New Username: </label><br>
-                <input id="InputUsername" class="InputUsernameStyle" name="username"></input>
+                <label class="updateTitle">Update your personal information </label><br>
+                <label class="updateNameLabelStyle">New Name: </label><br>
+                <input id="updateName" class="updateNameStyle" name="name"/>
                 <br>
-                <label class="PasswordLabelStyle">New Password: </label><br>
-                <input id="InputPassword" class="InputPasswordStyle" type="password" name="password"></input>
+                <label class="updateUsernameLabelStyle">New Username: </label><br>
+                <input id="updateUsername" class="updateUsernameStyle" name="username"/>
                 <br>
-                <label class="UsernameLabelStyle">Telephone Number: </label><br>
-                <input id="InputPhoneNum" class="InputPhoneNumStyle" name="phonenum"></input>
+                <label class="updatePasswordLabelStyle">New Password: </label><br>
+                <input id="updatePassword" class="updatePasswordStyle" type="password" name="password"/>
                 <br>
-                <label class="EmailLabelStyle">Email: </label><br>
-                <input id= "InputEmail" class="InputEmailStyle" type="email" name="email"></input>
+                <label class="updatePhoneNumLabelStyle">Telephone Number: </label><br>
+                <input id="updatePhoneNum" class="updatePhoneNumStyle" type="number" name="phonenum"/>
                 <br>
-                <button type="button" id = "BackUpdateInfo" class ="BackUpdateInfoStyle" >Back</button>
-                <button type="button" id = "UpdateNewInfo" class ="UpdateNewInfoStyle" >Update</button>
+                <label class="updateEmailLabelStyle">Email: </label><br>
+                <input id= "updateEmail" class="updateEmailStyle" type="email" name="email"/>
+                <br>
+                <button type="button" id="BackUpdateInfo" class="BackUpdateInfoStyle">Back</button>
+                <button type="button" id="UpdateNewInfo" class="UpdateNewInfoStyle">Update</button>
             </form>
         </div>
- <!-------------------------------------------google calender page-------------------------------------------------------->
-        <div id = "google-calender-page">
-        <button id="authorize-button" style="display: none;">Authorize</button>
-        <button id="signout-button" style="display: none;">Sign Out</button>
-        <pre id="content"></pre>
-        <!--<iframe src="https://calendar.google.com/calendar/embed?src=jtgimrp0tktq69np5qopvrn5c8%40group.calendar.google.com&ctz=Asia%2FJerusalem" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>-->
-        </div>    
-<!--------------------------------------------main page----------------------------------------------------------------->   
-        <div id = "main-page">  
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <a class="navbar-brand" id = "AppointmentButton" href="#">Appointments</a>
-                <a class="navbar-brand" id = "PatientFilesButton" href="#">Patient Files</a>
-                <a class="navbar-brand" id = "UpdateInfo" href="#">Update Personal Information</a>
-                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>-->
+		<!-----------------------------Doctor calender page--------------------------------------->
+        <div id="google-calender-page">
+			<div id="calendar-view">
+				<button id="authorize-button" style="display: none;">Authorize</button>
+				<button id="signout-button" style="display: none;">Sign Out</button>
+				<pre id="content"></pre>
+				<iframe id="googleIframe" src="https://calendar.google.com/calendar/embed?title=Dental%20Office&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=dentalprojectazrieli%40gmail.com&amp;color=%231B887A&amp;ctz=Asia%2FJerusalem" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+			</div>
+			<!-------------------------Appointments buttons--------------------------------------->
+			<div id="Appointments" class="AppointmentsStyle"></div>
+			<!-------------------------Modal Appointment------------------------------------------>
+			<div id="appointmentModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<label id="patientName"></label>
+						</div>
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-md-4">
+									<label id="appointDate"></label>
+								</div>
+								<div class="col-md-4">
+									<label id="appointStime"></label>
+								</div>
+								<div class="col-md-4">
+									<label id="appointDuration"></label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<label>Description: </label>
+									<p id="appointDes"></p>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button id="ApproveApoint" type="button" data-dismiss="modal" class="btn btn-primary">Approve</button>
+							<button id="DeclineApoint" type="button" data-dismiss="modal" class="btn btn-primary">Decline</button>
+							<button type="button" data-dismiss="modal" class="btn btn-primary">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-----------------------------Main patient page------------------------------------------> 
+        <div id="main-page">  
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="navbar">
+				<a class="navbar-brand" id="HelloUserName" href="#"></a>
+                <a class="navbar-brand AppointmentBtnStyle" id="NewAppointmentBtn" href="#">New Appointment</a>
+                <a class="navbar-brand UpdateInfoBtnStyle" id="UpdateInfoBtn" href="#">Update Personal Information</a>
+				<a class="navbar-brand AboutUsBtnStyle" id="AboutUsBtn" href="#">About Us</a>
+				<a class="navbar-brand LogoutBtnStyle" id="LogoutBtn" href="#">LogOut</a>
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-brand" id = "PatientFilesButton2" href="#">Patient Files2</a>
-                        </li><!--
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">Important Information</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link active" href="#">About Us</a>
-                          </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Treatments</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </li>
-                </ul>   -->
+                    <ul class="navbar-nav mr-auto"></ul>
                 </div>
             </nav>
             <main role="main">
-            <!-- Main jumbotron for a primary marketing message or call to action -->
-                <div class="jumbotron">
-                    <div class="container">
-                        <h1 class="display-3">Hello, world!</h1>
-                        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-                    </div>
+                <div class="container">
+                    <div class="row">
+                        <h3 class="display-3">Your upcoming appointments:</h3>
+					</div>
+					<div class="row">
+                        <div id="upcomingAppointments"></div>
+					</div>
                 </div>
                 <div class="container">
-                <!-- Example row of columns -->
                     <div class="row">
-                        <div class="col-md-4">
-                            <h2>Heading</h2>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                        <div class="col-md-4" id="bottom-left-box">
+                            <img src="pics/whiteing.jpg"/>
+                            <h2>The hidden dangers of cosmetic treatments</h2>
+                            <p>Before starting any cosmetic procedure- check out this article. Protect yourself from tricks and scams!</p>
+                            <p><a class="btn btn-secondary" href="https://askthedentist.com/teeth-whitening/" target= "_blank" role="button">View details &raquo;</a></p>
                         </div>
-                        <div class="col-md-4">
-                            <h2>Heading</h2>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                        <div class="col-md-4" id="bottom-middle-box">
+                            <img src="pics/kids.jpg"/>
+                            <h2>Is fluoride healthy for your child?</h2>
+                            <p>Questions and answers from an ADA dentist.</p>
+                            <p><a class="btn btn-secondary" href="https://www.mouthhealthy.org/en/babies-and-kids/moms-guide-to-fluoride/" target="_blank" role="button">View details &raquo;</a></p>
                         </div>
-                        <div class="col-md-4">
-                            <h2>Heading</h2>
-                            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                        <div class="col-md-4" id="bottom-right-box">
+                            <img src="pics/family.jpg"/>
+                            <h2>General dental health</h2>
+                            <p>Studies show a link between poor dental health and other life threatening conditions. </p>
+                            <p><a class="btn btn-secondary" href="https://www.colgateprofessional.com/education/patient-education/topics/systemic/why-a-healthy-mouth-is-good-for-your-body" target="_blank" role="button">View details &raquo;</a></p>
                         </div>
                     </div>
                 </div> 
-            </main> 
+            </main>
+			<div class="footer">
+               Email: kalinerwork@gmail.com Tel:04-9028421 P.O Box 108 Shorashim, Misgav 20164
+            </div>
         </div>
     </body>
 </html>
